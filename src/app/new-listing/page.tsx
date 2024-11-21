@@ -41,8 +41,8 @@ export default async function NewListingPage() {
         <p className="text-gray-500 text-sm mb-2">Select a company to create a job add for</p>
         <div>
           <div className="border inline-block rounded-md">
-            {Object.keys(organizationsNames).map(orgId => (
-              <Link
+            {Object.keys(organizationsNames).map((orgId, index )=> (
+              <Link key={index}
                 href={'/new-listing/' + orgId}
                 className={
                   "py-2 px-4 flex gap-2 items-center "
