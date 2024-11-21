@@ -11,11 +11,12 @@ export default function Jobs({header,jobs}:{header:string,jobs:Job[]}) {
           {!jobs?.length && (
             <div>No jobs found</div>
           )}
-          {jobs && jobs.map(job => (
+          {jobs && jobs.map((job, index) => (
             // <div key={job._id}>
+            
             // eslint-disable-next-line react/jsx-key
-            <JobRow jobDoc={job} />
-            //*</div> 
+            <JobRow jobDoc={job} key={index}/>
+            // </div> 
           ))}
         </div>
 
